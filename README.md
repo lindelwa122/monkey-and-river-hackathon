@@ -58,3 +58,46 @@ Before running the server, set these environment variables in your terminal:
 export mongoDB="your_mongodb_connection_string"
 export JWT_SECRET="your_jwt_secret"
 export PORT=5000
+
+
+# 🚀 How to Run the Client (Vite App)
+
+This document provides step-by-step instructions to set up and run the client-side of a Vite application.
+
+---
+
+## 🧾 Prerequisites
+
+Make sure the following tools are installed on your machine:
+
+- **Node.js** (v16 or higher) – [Download here](https://nodejs.org/)
+- **npm** (comes with Node.js) or **Yarn**
+
+---
+
+📁 Step 1: Navigate to the Client Directory
+
+If your Vite client lives inside a subfolder (e.g., `client/`), navigate to it:
+
+```bash
+cd client
+
+
+📦 Step 2: Install Dependencies
+
+Install all required packages listed in package.json:
+npm install
+
+
+🚀 Step 3: Run the Development Server
+
+Start the Vite dev server:
+npm run dev
+
+You will see an output like:
+  VITE vX.X.X  ready in xxx ms
+
+  ➜  Local:   http://localhost:5173/
+✅ Open the provided URL in your browser to see the app running.
+
+
