@@ -1,10 +1,9 @@
 import { nanoid } from 'nanoid';
 import { format } from 'date-fns';
 
-
 import styles from './all-blogs.module.css';
 import extractIntro from '../../utils/extract-info';
-import { useAlertsData } from '../../utils/custom-hooks';
+import { useAlertsData } from '../../../utils/custom-hooks';
 
 const Alert = () => {
   const { error, alerts, loading } = useAlertsData();
@@ -12,10 +11,7 @@ const Alert = () => {
   let alertList;
   if (alerts) {
     alertList = alerts.map(alert => {
-        <div clasName={styles.outlet}>
-            {alertList}
-
-        </div>
+        
       return (
         <div
           key={nanoid()} 
@@ -28,7 +24,12 @@ const Alert = () => {
       )
     });
   }
+  return(
+        <div clasName={styles.outlet}>
+            {alertList}
 
+        </div>
+        )
 }
 
 export default Alert;
