@@ -1,3 +1,3 @@
-const serverURI = 'https://localhost:5000';
+const serverURI = 'http://localhost:5000';
 
 export { serverURI };

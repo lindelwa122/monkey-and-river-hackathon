@@ -1,4 +1,8 @@
+import { serverURI } from './globals-variables';
+
 const saveDataToServer = async (url, data, method='POST') => {
+    console.log(data);
+
   const response = await fetch(serverURI + url, {
     headers: { 
       'Content-Type': 'application/json'

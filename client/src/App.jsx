@@ -1,25 +1,7 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Router from './router';
 
-import MonitoredList from './components/MonitoredList.jsx';
-import MonitoredCreate from './components/MonitoredCreate.jsx';
-import MonitoredEdit from './components/MonitoredEdit.jsx';
-import MonitoredView from './components/MonitoredView.jsx';
-
-function App() {
-  return (
-    <Router>
-      <div>
-        <h1>🌍 Monitored Destinations Dashboard</h1>
-        <Routes>
-          <Route path="/monitored" element={<MonitoredList />} />
-          <Route path="/monitored/create" element={<MonitoredCreate />} />
-          <Route path="/monitored/edit/:id" element={<MonitoredEdit />} />
-          <Route path="/monitored/view/:id" element={<MonitoredView />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+const App = () => {
+  return <Router />;
 }
 
 export default App;

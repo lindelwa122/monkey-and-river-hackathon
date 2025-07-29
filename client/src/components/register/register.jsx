@@ -59,7 +59,7 @@ const Register = () => {
 
     setFormState({ status: 'saving', error: null });
 
-    const res = await saveDataToServer('/register', form)
+    const res = await saveDataToServer('/auth/register', form)
       .catch(err => {
         setFormState({ status: null, error: err });
         console.error(err);
