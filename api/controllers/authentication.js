@@ -16,7 +16,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 // Mock User model — replace with real model (e.g., Mongoose or Sequelize)
-const User = require('../models/User'); // Adjust path as needed
+const User = require('../models/user'); // Adjust path as needed
 
 const SECRET_KEY = "ThisIsNotTheSecretKey";
 
