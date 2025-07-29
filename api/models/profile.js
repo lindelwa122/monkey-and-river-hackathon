@@ -2,11 +2,18 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const MonitoredDestinationSchema = new Schema({
-  location: { type: String, required: true, minLength: 2, maxLength: 100 },
-  riskLevel: { type: String, enum: ['low', 'medium', 'high'], default: 'low' },
-  lastChecked: { type: Date, default: Date.now },
-  user_id: { type: Schema.Types.ObjectId, ref: 'User', required: true }
+const ProfileSchema = new Schema({
+  user_id: { type: Schema.Types.ObjectId, ref: 'User', required: true, unique: true },
+
+  bio: { type: String, maxLength: 300, default: '' },
+  location: { type: String, maxLength: 100 },
+  interests: [{ type: String }],
+  socialLinks: {
+    instagram: { type: String },
+    tiktok: { type: String },
+    other: { type: String }
+  },
+  joinedAt: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('MonitoredDestination', MonitoredDestinationSchema);
+module.exports = mongoose.model('Profile', ProfileSchema);
