@@ -3,7 +3,7 @@ const router = express.Router();
 
 const alertsController = require('../controllers/alerts');
 
-router.get('/:username/alerts/get/all', alertsController.getAll);
-router.get('/:username/alerts/get/:id', alertsController.get);
+router.get('/:username/get/all', alertsController.getAll);
+router.get('/:username/get/:id', alertsController.get);
 
-module.exports = alertsRouter;
+module.exports = router;

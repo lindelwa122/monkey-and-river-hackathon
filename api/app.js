@@ -30,7 +30,7 @@ const monitoredDestination = require('./routes/monitored_destination');
 const profile = require('./routes/profile');
 
 app.use('/alerts', alertsRouter);
-app.use('/authentication', authenticationRouter);
+app.use('/auth', authenticationRouter);
 app.use('/monitor', monitoredDestination);
 app.use('/profile', profile);
 

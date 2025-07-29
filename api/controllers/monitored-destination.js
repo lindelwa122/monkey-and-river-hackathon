@@ -1,4 +1,4 @@
-const MonitoredDestination = require('../models/MonitoredDestination');
+const MonitoredDestination = require('../models/monitored_destination');
 
 module.exports = {
   // Create

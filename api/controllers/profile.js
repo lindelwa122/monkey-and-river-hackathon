@@ -2,7 +2,7 @@ const Profile = require('../models/profile');
 const User = require('../models/user');
 const UserSerializer = require('../serializers/user_serializer.js');
 const ProfileSerializer = require('../serializers/profile_serializer.js');
-const { combineJson, createError } = require('../utils');
+const { combineJson, createError } = require('../utils/utils');
 const { body, validationResult } = require('express-validator');
 const asyncHandler = require('express-async-handler');
 
