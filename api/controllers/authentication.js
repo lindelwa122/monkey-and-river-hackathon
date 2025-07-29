@@ -23,7 +23,9 @@ const SECRET_KEY = "ThisIsNotTheSecretKey";
 module.exports = {
   // Register a new user
   register: async (req, res) => {
-    const { firstName, lastName, password } = req.body;
+    const { fullName, email, id, password } = req.body;
+
+    const [firstName, lastName] = fullName.split(" ");
 
     try {
       const existingUser = await User.findOne({ firstName, lastName });
@@ -36,11 +38,14 @@ module.exports = {
       const newUser = await User.create({
         firstName,
         lastName,
+        email,
+        id,
         password: hashedPassword,
       });
 
       res.status(201).json({ message: 'User registered successfully', userId: newUser.id });
     } catch (error) {
+      console.log(error);
       res.status(500).json({ message: 'Registration failed', error });
     }
   },
