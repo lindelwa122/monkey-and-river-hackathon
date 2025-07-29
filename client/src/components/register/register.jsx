@@ -5,9 +5,9 @@ import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import { BsXCircleFill } from 'react-icons/bs';
 
 import { saveDataToServer } from '../../utils/send-data-to-server';
-import styles from './registration.module.css';
+import styles from './register.module.css';
 
-const Registration = () => {
+const Register = () => {
   const [form, setForm] = useState({
     fullName: '',
     email: '',
@@ -59,7 +59,7 @@ const Registration = () => {
 
     setFormState({ status: 'saving', error: null });
 
-    const res = await saveDataToServer('/auth/register', form)
+    const res = await saveDataToServer('/register', form)
       .catch(err => {
         setFormState({ status: null, error: err });
         console.error(err);
@@ -169,4 +169,4 @@ const Registration = () => {
   );
 };
 
-export default Registration;
+export default Register;
