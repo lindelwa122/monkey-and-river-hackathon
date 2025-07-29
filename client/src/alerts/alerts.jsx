@@ -12,6 +12,10 @@ const Alert = () => {
   let alertList;
   if (alerts) {
     alertList = alerts.map(alert => {
+        <div clasName={styles.outlet}>
+            {alertList}
+
+        </div>
       return (
         <div
           key={nanoid()} 
