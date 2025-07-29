@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/monitored-destination');
-const auth = require('../middleware/auth'); // JWT auth middleware
+// const auth = require('../middleware/auth'); // JWT auth middleware
 
-router.post('/create', auth, controller.create);
-router.get('/get/all', auth, controller.getAll);
-router.get('/get/:id', auth, controller.getById);
-router.put('/update/:id', auth, controller.update);
-router.delete('/delete/:id', auth, controller.delete);
+router.post('/create', controller.create);
+router.get('/get/all', controller.getAll);
+router.get('/get/:id', controller.getById);
+router.put('/update/:id', controller.update);
+router.delete('/delete/:id', controller.delete);
 
-module.exports = DestRouter;
+module.exports = router;
