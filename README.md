@@ -86,12 +86,16 @@ cd client
 📦 Step 2: Install Dependencies
 
 Install all required packages listed in package.json:
+
+```bash
 npm install
 
 
 🚀 Step 3: Run the Development Server
 
 Start the Vite dev server:
+
+```bash
 npm run dev
 
 You will see an output like:
