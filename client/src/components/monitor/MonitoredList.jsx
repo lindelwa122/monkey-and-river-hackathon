@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import API from '../api';
+import API from '../../api';
 
 export default function MonitoredList() {
   const [destinations, setDestinations] = useState([]);

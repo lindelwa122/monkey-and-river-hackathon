@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import MonitoredList from './components/MonitoredList.jsx';
-import MonitoredCreate from './components/MonitoredCreate.jsx';
-import MonitoredEdit from './components/MonitoredEdit.jsx';
-import MonitoredView from './components/MonitoredView.jsx';
+import MonitoredList from './components/monitor/MonitoredList.jsx';
+import MonitoredCreate from './components/monitor/MonitoredCreate.jsx';
+import MonitoredEdit from './components/monitor/MonitoredEdit.jsx';
+import MonitoredView from './components/monitor/MonitoredView.jsx';
 import SetupProfile from './components/SetupProfile';
 
 function App() {
