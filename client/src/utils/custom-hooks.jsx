@@ -75,7 +75,7 @@ const useAlertsData = (username) => {
     fetchData();
   }, [id]);
 
-  return { blog, error, loading };
+  return { alert, error, loading };
 }
 
 const useProfileData = (username) => {
