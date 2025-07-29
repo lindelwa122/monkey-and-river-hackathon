@@ -1,11 +1,10 @@
-/* Register.css */
 
 .main {
   height: 100vh;
   display: flex;
   background-color: #f9fafb;
   font-family: sans-serif;
-  text-align: left; /* Override App.css's center text */
+  text-align: center; 
 }
 
 .sidebar {
