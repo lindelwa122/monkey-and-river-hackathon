@@ -15,3 +15,46 @@ In terms of scalability and real-time performance, Node.js is well known for its
 Finally, the MERN ecosystem supports a strong testing environment. We used tools such as Jest, Supertest, and React Testing Library to cover our core functionality, including authentication flows, database interactions, and CRUD operations.
 
 
+
+# MERN API Backend – Setup Guide
+
+This is the backend API for a MERN stack application using **Node.js**, **Express**, **React.js** and **MongoDB**.
+
+---
+
+## Technologies Used
+
+- Node.js
+- Express
+- MongoDB (via Mongoose)
+- JSON Web Tokens (JWT) for auth
+- dotenv (optional for `.env` usage)
+
+---
+
+## 🛠️ Setup Instructions
+
+Follow the steps below to get the API running locally.
+
+---
+
+### 1. 📁 Clone the Repository
+
+```bash
+git clone git@github.com:lindelwa122/monkey-and-river-hackathon.git
+cd monkey-and-river-hackathon/api
+
+
+### 2.  Install Dependencies
+
+```bash
+npm install
+
+
+### 3. 🔐 Set Environment Variables (Using export)
+Before running the server, set these environment variables in your terminal:
+
+```bash
+export mongoDB="your_mongodb_connection_string"
+export JWT_SECRET="your_jwt_secret"
+export PORT=5000
