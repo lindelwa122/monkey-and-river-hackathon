@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import API from '../api';
+import API from '../../api';
 
 export default function MonitoredCreate() {
   const [form, setForm] = useState({ location: '', risk_level: 'low', hasChecked: false });
