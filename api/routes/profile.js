@@ -11,5 +11,6 @@ router.get('/:username/profile/get', profileController.getProfile);
 router.put('/:username/first_name/update', profileController.updateFirstName);
 router.put('/:username/last_name/update', profileController.updateLastName);
 router.put('/:username/password/update', profileController.updatePassword);
+router.put('/:username/email/update', profileController.updateEmail);
 
 module.exports = profileRouter;
