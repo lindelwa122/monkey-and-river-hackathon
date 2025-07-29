@@ -7,11 +7,11 @@ const { body, validationResult } = require('express-validator');
 const asyncHandler = require('express-async-handler');
 
 exports.getProfile = asyncHandler(async (req, res, next) => {
-    const user = await User.findById(req.body.user_id).exec();
+    const user = await User.findById(req.params.id).exec();
     const profile = await Profile.find({ user_id: user._id }).exec();
 
     const serializedUser = new UserSerializer(user);
-    serializedUser.include('first_name last_name')
+    serializedUser.include('first_name last_name');
 
     const serializedProfile = new ProfileSerializer(profile);
     serializedProfile.include('one_more_thing another thing');
