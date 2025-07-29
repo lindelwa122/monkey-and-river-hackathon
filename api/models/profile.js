@@ -4,16 +4,13 @@ const Schema = mongoose.Schema;
 
 const ProfileSchema = new Schema({
   user_id: { type: Schema.Types.ObjectId, ref: 'User', required: true, unique: true },
-
-  bio: { type: String, maxLength: 300, default: '' },
+  name: { type: String, required: true },
+  email: { type: String, required: true, lowercase: true },
   location: { type: String, maxLength: 100 },
-  interests: [{ type: String }],
-  socialLinks: {
-    instagram: { type: String },
-    tiktok: { type: String },
-    other: { type: String }
-  },
-  joinedAt: { type: Date, default: Date.now }
+  joinedAt: { type: Date, default: Date.now },
+  receiveEmailAlerts: { type: Boolean, default: true },
+  receiveSmsAlerts: { type: Boolean, default: false }
+
 });
 
 module.exports = mongoose.model('Profile', ProfileSchema);
